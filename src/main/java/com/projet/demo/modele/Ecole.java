@@ -1,5 +1,7 @@
 package com.projet.demo.modele;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -51,5 +53,7 @@ public class Ecole {
 	public void setClasse(List<Classe> classe) {
 		this.classe = classe;
 	}
+	
+	
 
 }

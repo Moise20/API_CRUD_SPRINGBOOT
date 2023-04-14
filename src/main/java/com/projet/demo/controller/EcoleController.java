@@ -2,6 +2,8 @@ package com.projet.demo.controller;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.projet.demo.modele.Classe;
 import com.projet.demo.modele.Ecole;
 import com.projet.demo.service.EcoleService;
 
@@ -26,6 +29,25 @@ public class EcoleController {
 	public EcoleController(EcoleService ecoleService) {
 		this.ecoleService = ecoleService;
 	}
+	
+	@PostMapping("/create-multiple")
+	public List<Ecole> createMultiple() {
+	    return ecoleService.creerPlusieurs();
+	}
+	
+//	@PostMapping("/ajouter-avec-classes")
+//    public Ecole creerAvecClasses(@RequestBody Ecole ecole, @RequestBody List<Classe> classes) {
+//       // Ecole nouvelleEcole = ecoleService.creerAvecClasses(ecole, classes);
+//        //return new ResponseEntity<>(nouvelleEcole, HttpStatus.CREATED);
+//        return ecoleService.creerAvecClasses(ecole, classes);
+//    }
+	
+	@PostMapping("/ajouter-avec-classes")
+    public ResponseEntity<Ecole> creerAvecClasses(@RequestBody Ecole ecole, @RequestBody List<Classe> classes) {
+        Ecole nouvelleEcole = ecoleService.creerAvecClasses(ecole, classes);
+        return new ResponseEntity<>(nouvelleEcole, HttpStatus.CREATED);
+    }
+
 	
 	
 	@PostMapping("/create")
