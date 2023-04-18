@@ -7,7 +7,7 @@ import com.projet.demo.modele.Ecole;
 
 public interface EcoleService {
 	
-	List<Ecole> creerPlusieurs();
+	List<Ecole> creerPlusieursEcoles();
 	
 	Ecole creerAvecClasses(Ecole ecole, List<Classe> classes);
 

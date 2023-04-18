@@ -27,10 +27,10 @@ public class ClasseController {
 		this.classeService=classeService;
 	}
 	
-	@PostMapping("/create-multiple/{id}")
+	@PostMapping("/create-ten-class/{id}")
 	public List<Classe> creerClassesPourEcole(@PathVariable Long id) {
 		
-	    return classeService.creerPlusieurs(id);
+	    return classeService.creerPlusieursClasses(id);
 	}
 
 	

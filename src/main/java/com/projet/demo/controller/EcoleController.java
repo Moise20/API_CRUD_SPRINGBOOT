@@ -30,9 +30,9 @@ public class EcoleController {
 		this.ecoleService = ecoleService;
 	}
 	
-	@PostMapping("/create-multiple")
+	@PostMapping("/create-ten-school")
 	public List<Ecole> createMultiple() {
-	    return ecoleService.creerPlusieurs();
+	    return ecoleService.creerPlusieursEcoles();
 	}
 	
 //	@PostMapping("/ajouter-avec-classes")

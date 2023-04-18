@@ -56,17 +56,28 @@ public class EcoleServiceImplement implements EcoleService{
 	}
 
 	@Override
-	public List<Ecole> creerPlusieurs() {
+	public List<Ecole> creerPlusieursEcoles() {
 		// TODO Auto-generated method stub
-		List<String> noms = Arrays.asList("Ecole 1", "Ecole 2", "Ecole 3", "Ecole 4", "Ecole 5", "Ecole 6", "Ecole 7", "Ecole 8", "Ecole 9", "Ecole 10");
-		List<String> descriptions = Arrays.asList("Description 1", "Description 2", "Description 3", "Description 4", "Description 5", "Description 6", "Description 7", "Description 8", "Description 9", "Description 10");
+//		List<String> noms = Arrays.asList("3ISLYON", "ARFIS", "AROBASE", "Bellecour ecole", "ESTBB", "BLOO", "CAMAS", "ENS", "CEESO Lyon", "CSB School");
+//		List<String> descriptions = Arrays.asList("Audiovisuel", "droit Cinema", "medico-social", "Design", "Photographie", "aeronautique", "litterature", "commerce", "Gestion", "management");
 
+		String[] noms = {"3ISLYON", "ARFIS", "AROBASE", "Bellecour ecole", "ESTBB", "BLOO", "CAMAS", "ENS", "CEESO Lyon", "CSB School"};
+		String[] descriptions = {"Audiovisuel", "droit Cinema", "medico-social", "Design", "Photographie", "aeronautique", "litterature", "commerce", "Gestion", "management"};
+	    
 		List<Ecole> ecoles1 = new ArrayList<>();
 		for (int i = 0; i < 10; i++) {
-		    Ecole ecole = new Ecole();
-		    ecole.setNom(noms.get((int) (Math.random() * noms.size())));
-		    ecole.setDescription(descriptions.get((int) (Math.random() * descriptions.size())));
+			
+			Ecole ecole = new Ecole();
+			ecole.setNom(noms[i]);
+			ecole.setDescription(descriptions[i]);;
+	        
+	         
+			
+//		    Ecole ecole = new Ecole();
+//		    ecole.setNom(noms.get((int) (Math.random() * noms.size())));
+//		    ecole.setDescription(descriptions.get((int) (Math.random() * descriptions.size())));
 //		    String nom = LocalDateTime.now().toString() + "_" + Math.random();
+			
 //		    String description = LocalDateTime.now().toString() + "_" + Math.random();
 //		    ecole.setNom(nom);
 //		    ecole.setDescription(description);

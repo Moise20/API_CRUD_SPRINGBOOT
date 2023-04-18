@@ -83,10 +83,11 @@ public class ClasseServiceImplement implements ClasseService{
 
 
 	@Override
-	public List<Classe> creerPlusieurs(Long id) {
+	public List<Classe> creerPlusieursClasses(Long id) {
 		// TODO Auto-generated method stub
 		Ecole ecole = ecoleRepository.findById(id).orElseThrow(() -> new RuntimeException("Ecole non trouvé"));
-	    String[] nomsClasses = {"Classe 1", "Classe 2", "Classe 3", "Classe 4", "Classe 5", "Classe 6", "Classe 7", "Classe 8", "Classe 9", "Classe 10"};
+	    String[] nomsClasses = {"Classe 1", "Classe 2", "Classe 3", "Classe 4", "Classe 5", "Classe 6", "Classe 7", "Classe 8", "Classe 9", "Classe 10",
+	    		"Classe 11", "Classe 12", "Classe 13", "Classe 14", "Classe 15", "Classe 16", "Classe 17", "Classe 18", "Classe 19", "Classe 20"};
 	    
 	    List<Classe> classeM = new ArrayList<>();
 	    for(int i = 0; i < 10; i++) {

@@ -9,7 +9,7 @@ import com.projet.demo.modele.Ecole;
 
 public interface ClasseService {
 	
-	List<Classe> creerPlusieurs(Long id);
+	List<Classe> creerPlusieursClasses(Long id);
 	
 	Classe creer(Classe classe,Long id);
 	
